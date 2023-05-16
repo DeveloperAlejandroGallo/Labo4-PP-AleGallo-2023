@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "labo4primerparcial2023": {
+      "hosting": {
+        "Labo4-PP-AleGallo-2023": [
+          "labo4primerparcial2023"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "labo4primerparcial2023"
+  }
+}

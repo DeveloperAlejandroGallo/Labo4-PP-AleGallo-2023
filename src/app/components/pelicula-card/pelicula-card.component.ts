@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Generos } from 'src/app/modelos/generos';
+import { Pelicula } from 'src/app/modelos/pelicula';
 
 @Component({
   selector: 'app-pelicula-card',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class PeliculaCardComponent {
 
+  @Input() peliSeleccionadaInput?: Pelicula;
+  @Input() accion?: string;
+
+  getGenero(genero: Generos) {
+    return Generos[genero];
+    }
 }

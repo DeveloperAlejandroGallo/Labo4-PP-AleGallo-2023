@@ -1,0 +1,12 @@
+<body class="bg-dark">
+  <div class="container" style="padding: 10px;">
+      <div class="row">
+          <div class="col-md-4 order-md-2 mb-4" style="padding: 10px;">
+              <app-tabla-paises (paisSeleccionadoOut)="recibirPais($event)"></app-tabla-paises>
+          </div>
+          <div class="col-md-8 order-md-1">
+              <app-abm-actor [nacionalidadInput]="paisActor" ></app-abm-actor>
+          </div>
+      </div>
+  </div>
+</body>

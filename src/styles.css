@@ -32,3 +32,26 @@ body {
   color: white;
   margin-top: 2px;
 }
+.list-group{
+  max-height: 100%;
+  margin-bottom: 10px;
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.text-muted.text-bg-dark {
+  margin-top:5px;
+  color: white;
+}
+
+
+.error-message {
+  display: block;
+  color: #ff5c5c;
+  background-color: #fff;
+  border: 1px solid #d52c2c;
+  padding: 5px;
+  border-radius: 4px;
+  margin-top: 5px;
+}

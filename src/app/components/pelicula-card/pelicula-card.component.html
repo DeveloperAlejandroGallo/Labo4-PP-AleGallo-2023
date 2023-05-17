@@ -1,1 +1,14 @@
-<p>pelicula-card works!</p>
+<h4 class="d-flex justify-content-between align-items-center mb-3">
+  <h1 style="color: azure;">{{accion}} Película</h1>
+</h4>
+<div class="card" style="width: 18rem; height: 20rem">
+  <div class="card-body">
+    <h4 class="card-title">{{peliSeleccionadaInput?.Titulo}} </h4>
+    <img [src]="peliSeleccionadaInput?.fotoPelicula" width="120px" height="150px" class="mx-auto d-block" alt="...">
+    <div *ngIf="accion != 'Eliminar'">
+      <h5 class="card-text mb-2">Género: {{getGenero(peliSeleccionadaInput!.Genero)}}</h5>
+      <h5 class="card-text mb-2">Fecha Estreno: {{peliSeleccionadaInput?.fechaEstreno | date:"dd/MM/yyyy"}}</h5>
+      <h5 class="card-text mb-2">Público: {{peliSeleccionadaInput?.cantidadPublico}}</h5>
+    </div>
+  </div>
+</div>

@@ -8,4 +8,6 @@ export const environment = {
     apiKey: 'AIzaSyCgv_VrpzKmUjSEwKokYsXQVEHuSL97cBE',
     authDomain: 'labo4primerparcial2023.firebaseapp.com',
     messagingSenderId: '1026414706314',
-  },};
+  },
+  urlPaises: 'https://restcountries.com/v3.1/all',
+};

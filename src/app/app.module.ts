@@ -49,6 +49,25 @@ import { ErrorComponent } from './pages/error/error.component';
 import { ActorCardComponent } from './components/actor-card/actor-card.component';
 import { PeliculaCardComponent } from './components/pelicula-card/pelicula-card.component';
 import { HighligthDirective } from './directivas/highligth.directive';
+import { ToastMsgService } from './services/toast-msg.service';
+import { BusquedaComponent } from './pages/busqueda/busqueda.component';
+import { AltaPeliculaComponent } from './pages/pelicula/alta-pelicula/alta-pelicula.component';
+import { ListadoPeliculaComponent } from './pages/pelicula/listado-pelicula/listado-pelicula.component';
+import { AltaActorComponent } from './pages/actor/alta-actor/alta-actor.component';
+import { ListadoActorComponent } from './pages/actor/listado-actor/listado-actor.component';
+import { TablaPeliculaComponent } from './pages/pelicula/tabla-pelicula/tabla-pelicula.component';
+import { DetallePeliculaComponent } from './pages/pelicula/detalle-pelicula/detalle-pelicula.component';
+import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
+import { BorrarPeliculaComponent } from './pages/pelicula/borrar-pelicula/borrar-pelicula.component';
+import { ModificarPeliculaComponent } from './pages/pelicula/modificar-pelicula/modificar-pelicula.component';
+import { AbmActorComponent } from './pages/actor/abm-actor/abm-actor.component';
+import { PeliculasService } from './services/peliculas.service';
+import { MenuActorComponent } from './pages/actor/menu-actor/menu-actor.component';
+import { MenuPeliculaComponent } from './pages/pelicula/menu-pelicula/menu-pelicula.component';
+import { PeliculaActorComponent } from './pages/actor/pelicula-actor/pelicula-actor.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -58,19 +77,48 @@ import { HighligthDirective } from './directivas/highligth.directive';
     ErrorComponent,
     ActorCardComponent,
     PeliculaCardComponent,
-    HighligthDirective
+    HighligthDirective,
+    BusquedaComponent,
+    AltaPeliculaComponent,
+    ListadoPeliculaComponent,
+    AltaActorComponent,
+    ListadoActorComponent,
+    TablaPeliculaComponent,
+    DetallePeliculaComponent,
+    TablaPaisesComponent,
+    BorrarPeliculaComponent,
+    ModificarPeliculaComponent,
+    AbmActorComponent,
+    MenuActorComponent,
+    MenuPeliculaComponent,
+    PeliculaActorComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatIconModule,
+    MatDialogModule,
+    MatGridListModule,
+    MatCardModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
-    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ToastMsgService, PeliculasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

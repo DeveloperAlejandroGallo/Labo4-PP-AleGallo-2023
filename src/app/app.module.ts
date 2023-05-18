@@ -46,26 +46,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavVarComponent } from './components/nav-var/nav-var.component';
 import { BienvenidoComponent } from './pages/bienvenido/bienvenido.component';
 import { ErrorComponent } from './pages/error/error.component';
-import { ActorCardComponent } from './components/actor-card/actor-card.component';
-import { PeliculaCardComponent } from './components/pelicula-card/pelicula-card.component';
+
 import { HighligthDirective } from './directivas/highligth.directive';
 import { ToastMsgService } from './services/toast-msg.service';
-import { BusquedaComponent } from './pages/busqueda/busqueda.component';
-import { AltaPeliculaComponent } from './pages/pelicula/alta-pelicula/alta-pelicula.component';
-import { ListadoPeliculaComponent } from './pages/pelicula/listado-pelicula/listado-pelicula.component';
-import { AltaActorComponent } from './pages/actor/alta-actor/alta-actor.component';
-import { ListadoActorComponent } from './pages/actor/listado-actor/listado-actor.component';
-import { TablaPeliculaComponent } from './pages/pelicula/tabla-pelicula/tabla-pelicula.component';
 import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
-import { AbmActorComponent } from './pages/actor/abm-actor/abm-actor.component';
-import { PeliculasService } from './services/peliculas.service';
-import { MenuActorComponent } from './pages/actor/menu-actor/menu-actor.component';
-import { MenuPeliculaComponent } from './pages/pelicula/menu-pelicula/menu-pelicula.component';
-import { PeliculaActorComponent } from './pages/actor/pelicula-actor/pelicula-actor.component';
-import { AbmPeliculaComponent } from './pages/pelicula/abm-pelicula/abm-pelicula.component';
-import { TablaActorComponent } from './pages/actor/tabla-actor/tabla-actor.component';
 import { PaisCardComponent } from './components/pais-card/pais-card.component';
-import { ModificarPeliculaComponent } from './pages/pelicula/modificar-pelicula/modificar-pelicula.component';
+import { LoginComponent } from './pages/login/login.component';
+import { MenuRepartidorComponent } from './pages/repartidor/menu-repartidor/menu-repartidor.component';
+import { AltaRepartidorComponent } from './pages/repartidor/alta-repartidor/alta-repartidor.component';
+import { CargaRepartidorComponent } from './pages/repartidor/carga-repartidor/carga-repartidor.component';
+import { RepartidorCardComponent } from './components/repartidor-card/repartidor-card.component';
+import { ListadoRepartidorComponent } from './pages/repartidor/listado-repartidor/listado-repartidor.component';
+
+
 
 
 
@@ -76,24 +69,15 @@ import { ModificarPeliculaComponent } from './pages/pelicula/modificar-pelicula/
     NavVarComponent,
     BienvenidoComponent,
     ErrorComponent,
-    ActorCardComponent,
-    PeliculaCardComponent,
     HighligthDirective,
-    BusquedaComponent,
-    AltaPeliculaComponent,
-    ListadoPeliculaComponent,
-    AltaActorComponent,
-    ListadoActorComponent,
-    TablaPeliculaComponent,
     TablaPaisesComponent,
-    AbmActorComponent,
-    MenuActorComponent,
-    MenuPeliculaComponent,
-    PeliculaActorComponent,
-    AbmPeliculaComponent,
-    TablaActorComponent,
     PaisCardComponent,
-    ModificarPeliculaComponent
+    LoginComponent,
+    MenuRepartidorComponent,
+    AltaRepartidorComponent,
+    CargaRepartidorComponent,
+    RepartidorCardComponent,
+    ListadoRepartidorComponent
   ],
   imports: [
     AppRoutingModule,
@@ -120,7 +104,7 @@ import { ModificarPeliculaComponent } from './pages/pelicula/modificar-pelicula/
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
   ],
-  providers: [ToastMsgService, PeliculasService],
+  providers: [ToastMsgService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

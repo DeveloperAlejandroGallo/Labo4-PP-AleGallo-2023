@@ -1,0 +1,67 @@
+<h4 class="d-flex justify-content-between align-items-center mb-12">
+  <h1 style="color: azure;">Alta Repartidor</h1>
+</h4>
+<div >
+  <form [formGroup]="repartidorForm" (ngSubmit)="onSubmit()">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="dni">DNI</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="nombre" name="dni" placeholder="" formControlName="dni">
+        <small class="error-message" *ngIf="repartidorForm.controls['dni'].hasError('required') && repartidorForm.controls['dni'].touched">
+          El DNI es requerido
+        </small>
+      </div>
+  </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="nombre">Nombre</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" formControlName="nombre">
+          <small class="error-message" *ngIf="repartidorForm.controls['nombre'].hasError('required') && repartidorForm.controls['nombre'].touched">
+            El nombre es requerido
+          </small>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="edad">Edad</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="edad" name="edad" value=""  formControlName="edad" >
+          <small class="error-message" *ngIf="repartidorForm.controls['edad'].hasError('min') && repartidorForm.controls['edad'].touched">
+            Repartidor debe ser mayor a 18.
+          </small>
+        </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="capacidadTransporte">Capacidad Transporte</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="capacidadTransporte" name="capacidadTransporte" value=""  formControlName="capacidadTransporte" >
+        <small class="error-message" *ngIf="repartidorForm.controls['capacidadTransporte'].hasError('min') && repartidorForm.controls['capacidadTransporte'].touched">
+          Debe poder llevar al menos 2 cajas.
+        </small>
+      </div>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="paisOrigen">Pais Origen</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="paisOrigen" name="paisOrigen" formControlName="paisOrigen"
+          placeholder="Seleccione un pais." [ngModel]="nacionalidadInput.name.common"  >
+        <small class="error-message" *ngIf="repartidorForm.controls['paisOrigen'].hasError('required') && repartidorForm.controls['paisOrigen'].touched">
+          Debe seleccionar un pais
+        </small>
+      </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="unidadPropia">Tiene Unidad Propia</label>
+    <div class="col-sm-10">
+      <select class="form-control" id="genero" name="genero"  formControlName="genero" >
+        <option value="false" selected>No</option>
+        <option value="true">Si</option>
+      </select>
+      <small class="error-message" *ngIf="repartidorForm.controls['unidadPropia'].hasError('required') && repartidorForm.controls['unidadPropia'].touched">
+        Elija una respuesta
+      </small>
+    </div>
+</div>
+    <hr class="mb-4">
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Guardar</button>
+  </form>
+</div>

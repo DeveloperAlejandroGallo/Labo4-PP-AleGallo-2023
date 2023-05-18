@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Pais } from 'src/app/modelos/pais';
 
-import { Pelicula } from 'src/app/modelos/pelicula';
 
 @Component({
   selector: 'app-pais-card',

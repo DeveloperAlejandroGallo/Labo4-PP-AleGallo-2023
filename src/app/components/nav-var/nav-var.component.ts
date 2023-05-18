@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { Usuario } from 'src/app/modelos/user';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -8,9 +11,17 @@ import { Component } from '@angular/core';
 })
 export class NavVarComponent {
 
-  constructor(
+  @Input() inputUsuarioConectado?: Usuario;
 
-    ){}
+  constructor(private auth: AuthService,
+    private router: Router) {}
 
+  onClickLogOut(){
+  this.auth.cerrarSesion(this.inputUsuarioConectado!.email!);
+  this.inputUsuarioConectado = this.auth.logInfo();
+  setTimeout(() => {
+  this.router.navigate(['login']);
+  }, 1000);
+  }
 
 }

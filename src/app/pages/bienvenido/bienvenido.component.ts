@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { PeliculasService } from 'src/app/services/peliculas.service';
+import { Component, OnInit } from '@angular/core';
+import { GitInfo } from 'src/app/modelos/git-info';
+import { GitService } from 'src/app/services/git.service';
+
 
 
 @Component({
@@ -7,16 +9,22 @@ import { PeliculasService } from 'src/app/services/peliculas.service';
   templateUrl: './bienvenido.component.html',
   styleUrls: ['./bienvenido.component.css']
 })
-export class BienvenidoComponent {
+export class BienvenidoComponent implements OnInit{
 
+  gitInfo!: GitInfo;
   constructor(
-      private peliServ: PeliculasService
+      private gitServ: GitService
     ){}
 
-  insertPelis(){
-    this.peliServ.insertPelis();
-  }
-  getPelis(){
-      console.log(this.peliServ.listadoPeliculas);
-  }
+
+ngOnInit(): void {
+    this.gitServ.informacionGit();
+    setTimeout(()=>{
+      this.gitInfo = this.gitServ.infoGit;
+      console.log(this.gitServ.infoGit);
+    },500);
+
+}
+
+
 }

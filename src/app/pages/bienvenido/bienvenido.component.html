@@ -1,7 +1,11 @@
-<div class="text-center">
-  <h1 style="color: azure;">Alejandor Gallo - Primer Parcial 2023</h1>
+<div class="text-center" style="color: azure;">
+  <h1>{{gitInfo.name}} - Primer Parcial 2023</h1>
+  <h2>{{gitInfo.login}}</h2>
   <div>
-    <!-- <button routerLink="" class="btn btn-outline-primary" type="button" (click)="insertPelis()">Insert Pelis</button>
-    <button routerLink="" class="btn btn-outline-primary" type="button" (click)="getPelis()">Get Pelis</button> -->
+    <!-- <button routerLink="" class="btn btn-outline-warning" type="button" (click)="getInfoGit()">Get Git</button> -->
+    <img src="{{gitInfo.avatar_url}}" alt="avatar">
   </div>
+  <h3>
+    {{gitInfo.bio}}
+  </h3>
 </div>

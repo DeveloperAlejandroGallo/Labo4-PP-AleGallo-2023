@@ -3,7 +3,7 @@
 </h4>
 <div class="card">
   <ul class="list-group mb-3" style="max-height: 250px;">
-      <li *ngFor="let peli of peliculaListaInput" class="list-group-item d-flex justify-content-between lh-condensed"
+      <li *ngFor="let peli of listaPeliculas" class="list-group-item d-flex justify-content-between lh-condensed"
       (click)="seleccionarPeli(peli)" appHighligth="">
           <div>
               <p class="text-muted">{{peli.Titulo}}</p>

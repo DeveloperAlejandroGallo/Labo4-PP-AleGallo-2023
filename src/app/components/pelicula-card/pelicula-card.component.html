@@ -6,7 +6,7 @@
     <h4 class="card-title">{{peliSeleccionadaInput?.Titulo}} </h4>
     <img [src]="peliSeleccionadaInput?.fotoPelicula" width="120px" height="150px" class="mx-auto d-block" alt="...">
     <div *ngIf="accion != 'Eliminar'">
-      <h5 class="card-text mb-2">Género: {{getGenero(peliSeleccionadaInput!.Genero)}}</h5>
+      <h5 class="card-text mb-2">Género: {{peliSeleccionadaInput!.Genero}}</h5>
       <h5 class="card-text mb-2">Fecha Estreno: {{peliSeleccionadaInput?.fechaEstreno | date:"dd/MM/yyyy"}}</h5>
       <h5 class="card-text mb-2">Público: {{peliSeleccionadaInput?.cantidadPublico}}</h5>
     </div>

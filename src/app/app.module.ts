@@ -65,6 +65,8 @@ import { PeliculasService } from './services/peliculas.service';
 import { MenuActorComponent } from './pages/actor/menu-actor/menu-actor.component';
 import { MenuPeliculaComponent } from './pages/pelicula/menu-pelicula/menu-pelicula.component';
 import { PeliculaActorComponent } from './pages/actor/pelicula-actor/pelicula-actor.component';
+import { AbmPeliculaComponent } from './pages/pelicula/abm-pelicula/abm-pelicula.component';
+import { TablaActorComponent } from './pages/actor/tabla-actor/tabla-actor.component';
 
 
 
@@ -91,7 +93,9 @@ import { PeliculaActorComponent } from './pages/actor/pelicula-actor/pelicula-ac
     AbmActorComponent,
     MenuActorComponent,
     MenuPeliculaComponent,
-    PeliculaActorComponent
+    PeliculaActorComponent,
+    AbmPeliculaComponent,
+    TablaActorComponent
   ],
   imports: [
     AppRoutingModule,

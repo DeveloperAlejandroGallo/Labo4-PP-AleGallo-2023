@@ -1,7 +1,7 @@
 <body class="bg-dark">
   <div class="jumbotron jumbotron-fluid">
       <div class="container">
-          <app-tabla-pelicula [peliculaListaInput]="listadoPeliculas" (peliSeleccionadaOutput)="recibirPelicula($event)"></app-tabla-pelicula>
+          <app-tabla-pelicula (peliSeleccionadaOutput)="recibirPelicula($event)"></app-tabla-pelicula>
       </div>
   </div>
   <div class="container">

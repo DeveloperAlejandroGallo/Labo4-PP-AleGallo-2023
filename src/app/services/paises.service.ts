@@ -16,7 +16,7 @@ export class PaisesService {
     this.http.get(environment.urlPaises).subscribe({
       next: (paises) => {
         this.listaPaises = paises as Array<Pais>;
-        console.log('Pais Service:',this.listaPaises);
+        // console.log('Pais Service:',this.listaPaises);
       },
       error: (err) =>  console.error('Error al leer los paises: ' + err),
     });

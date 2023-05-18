@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Actor } from 'src/app/modelos/actor';
 import { Flag, Name, Pais } from 'src/app/modelos/pais';
 import { ActorService } from 'src/app/services/actores.service';
@@ -14,7 +15,7 @@ export class AbmActorComponent implements OnInit{
 
   constructor(private servActor: ActorService,
               private messages: ToastMsgService,
-
+              private router: Router
               ) {
                 this.abmInput = 'a';
                }
@@ -88,16 +89,12 @@ export class AbmActorComponent implements OnInit{
       foto: this.fotoActor,
     };
 
-    try
-    {
+
       console.log('Nuevo Actor', actorNuevo)
       this.servActor.nuevo(actorNuevo);
       this.messages.Info(`Actor ${actorNuevo.nombre}, ${actorNuevo.apellido} creado.`);
-      this.LimpiarCampos();
-
-    }catch(err){
-      this.messages.Error(`Submit Actor: ${(err as Error).message}`);
-    }
+      this.actorForm.reset();
+      this.router.navigate(['/actores'])
 
 
   }

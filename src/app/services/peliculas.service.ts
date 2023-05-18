@@ -40,7 +40,8 @@ export class PeliculasService {
     const docuNuevo = doc(this.coleccionPeliculas);
     // addDoc(coleccion, objeto);
     const nuevoId = docuNuevo.id;
-
+    if(pelicula.fotoPelicula.includes("C:\\fakepath\\"))
+      pelicula.fotoPelicula = pelicula.fotoPelicula.split("C:\\fakepath\\")[1];
     setDoc(docuNuevo, {
       id: nuevoId,
       Titulo: pelicula.Titulo,
@@ -48,7 +49,9 @@ export class PeliculasService {
       fechaEstreno: pelicula.fechaEstreno,
       cantidadPublico: pelicula.cantidadPublico,
       fotoPelicula: pelicula.fotoPelicula,
+      actores: pelicula.actores
     });
+
   }
 
   update(pelicula: Pelicula){
@@ -60,17 +63,18 @@ export class PeliculasService {
       fechaEstreno: pelicula.fechaEstreno,
       cantidadPublico: pelicula.cantidadPublico,
       fotoPelicula: pelicula.fotoPelicula,
+      actores: pelicula.actores
     })
   }
 
   insertPelis(){
     let pelis: Array<Pelicula> =  [
-      {id: '', Titulo: 'Lord of The Rings', Genero: Generos.CienciaFiccion, fechaEstreno: new Date(2002,10,1), cantidadPublico: 12222, fotoPelicula: '../../../assets/LoTR.jpeg'},
-      {id: '', Titulo: 'Matrix', Genero: Generos.CienciaFiccion, fechaEstreno: new Date(2000,10,1), cantidadPublico: 55555, fotoPelicula: '../../../assets/Matrix.jpeg'},
-      {id: '', Titulo: 'Avengers', Genero: Generos.CienciaFiccion, fechaEstreno: new Date(2015,1,1), cantidadPublico: 66666, fotoPelicula: '../../../assets/avengers.jpeg'},
-      {id: '', Titulo: 'Jhon Wick', Genero: Generos.CienciaFiccion, fechaEstreno: new Date(2002,5,1), cantidadPublico: 777777, fotoPelicula: '../../../assets/jhonWick.jpeg'},
-      {id: '', Titulo: 'Dracula', Genero: Generos.CienciaFiccion, fechaEstreno: new Date(1995,10,1), cantidadPublico: 999999, fotoPelicula: '../../../assets/Dracula.jpeg'},
-      {id: '', Titulo: 'La caida del Halcon negro', Genero: Generos.CienciaFiccion, fechaEstreno: new Date(2005,11,1), cantidadPublico: 888888, fotoPelicula: '../../../assets/LCHN.jpeg'},
+      {id: '', Titulo: 'Lord of The Rings', Genero: Generos.CienciaFiccion.toString(), fechaEstreno: new Date(2002,10,1).toLocaleDateString(), cantidadPublico: 12222, fotoPelicula: '../../../assets/LoTR.jpeg'},
+      {id: '', Titulo: 'Matrix', Genero: Generos.CienciaFiccion.toString(), fechaEstreno: new Date(2000,10,1).toLocaleDateString(), cantidadPublico: 55555, fotoPelicula: '../../../assets/Matrix.jpeg'},
+      {id: '', Titulo: 'Avengers', Genero: Generos.CienciaFiccion.toString(), fechaEstreno: new Date(2015,1,1).toLocaleDateString(), cantidadPublico: 66666, fotoPelicula: '../../../assets/avengers.jpeg'},
+      {id: '', Titulo: 'Jhon Wick', Genero: Generos.CienciaFiccion.toString(), fechaEstreno: new Date(2002,5,1).toLocaleDateString(), cantidadPublico: 777777, fotoPelicula: '../../../assets/jhonWick.jpeg'},
+      {id: '', Titulo: 'Dracula', Genero: Generos.CienciaFiccion.toString(), fechaEstreno: new Date(1995,10,1).toLocaleDateString(), cantidadPublico: 999999, fotoPelicula: '../../../assets/Dracula.jpeg'},
+      {id: '', Titulo: 'La caida del Halcon negro', Genero: Generos.CienciaFiccion.toString(), fechaEstreno: new Date(2005,11,1).toLocaleDateString(), cantidadPublico: 888888, fotoPelicula: '../../../assets/LCHN.jpeg'},
     ];
 
     pelis.forEach(peli => {

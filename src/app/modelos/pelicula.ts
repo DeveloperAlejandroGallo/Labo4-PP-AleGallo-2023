@@ -1,12 +1,13 @@
-import { Generos } from "./generos";
+import { Actor } from "./actor";
 
 export interface Pelicula {
   id: string;
   Titulo: string;
-  Genero: Generos;
-  fechaEstreno: Date;
+  Genero?: string;
+  fechaEstreno?: string;
   cantidadPublico: number;
   fotoPelicula: string;
+  actores?: Array<Actor>;
 
   /**
    *

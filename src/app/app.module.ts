@@ -56,10 +56,7 @@ import { ListadoPeliculaComponent } from './pages/pelicula/listado-pelicula/list
 import { AltaActorComponent } from './pages/actor/alta-actor/alta-actor.component';
 import { ListadoActorComponent } from './pages/actor/listado-actor/listado-actor.component';
 import { TablaPeliculaComponent } from './pages/pelicula/tabla-pelicula/tabla-pelicula.component';
-import { DetallePeliculaComponent } from './pages/pelicula/detalle-pelicula/detalle-pelicula.component';
 import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
-import { BorrarPeliculaComponent } from './pages/pelicula/borrar-pelicula/borrar-pelicula.component';
-import { ModificarPeliculaComponent } from './pages/pelicula/modificar-pelicula/modificar-pelicula.component';
 import { AbmActorComponent } from './pages/actor/abm-actor/abm-actor.component';
 import { PeliculasService } from './services/peliculas.service';
 import { MenuActorComponent } from './pages/actor/menu-actor/menu-actor.component';
@@ -67,6 +64,7 @@ import { MenuPeliculaComponent } from './pages/pelicula/menu-pelicula/menu-pelic
 import { PeliculaActorComponent } from './pages/actor/pelicula-actor/pelicula-actor.component';
 import { AbmPeliculaComponent } from './pages/pelicula/abm-pelicula/abm-pelicula.component';
 import { TablaActorComponent } from './pages/actor/tabla-actor/tabla-actor.component';
+import { PaisCardComponent } from './components/pais-card/pais-card.component';
 
 
 
@@ -86,16 +84,14 @@ import { TablaActorComponent } from './pages/actor/tabla-actor/tabla-actor.compo
     AltaActorComponent,
     ListadoActorComponent,
     TablaPeliculaComponent,
-    DetallePeliculaComponent,
     TablaPaisesComponent,
-    BorrarPeliculaComponent,
-    ModificarPeliculaComponent,
     AbmActorComponent,
     MenuActorComponent,
     MenuPeliculaComponent,
     PeliculaActorComponent,
     AbmPeliculaComponent,
-    TablaActorComponent
+    TablaActorComponent,
+    PaisCardComponent
   ],
   imports: [
     AppRoutingModule,

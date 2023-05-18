@@ -33,6 +33,7 @@ export class PeliculasService {
     const coleccion = collection(this.firestore, this.colectionName);
     const documento = doc(coleccion,id);
     deleteDoc(documento);
+    this.traerPeliculas();
   }
 
   nuevo(pelicula: Pelicula) {

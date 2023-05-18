@@ -1,1 +1,20 @@
-<p>pelicula-actor works!</p>
+<body class="bg-dark">
+<div class="jumbotron jumbotron-fluid">
+      <div class="container">
+          <app-tabla-actor (actorSeleccionadoOutput)="recibirActor($event)"></app-tabla-actor>
+      </div>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4"  *ngIf="actorRecibido">
+              <app-tabla-pelicula [listaPeliculas]="peliculasActor" ></app-tabla-pelicula>
+          </div>
+          <div class="col-md-4" *ngIf="actorRecibido">
+              <app-pais-card [paisRecibido]="paisPelicula"></app-pais-card>
+          </div>
+          <div class="col-md-4" *ngIf="actorRecibido">
+              <app-actor-card [actorSeleccionado]="actorRecibido"></app-actor-card>
+          </div>
+      </div>
+  </div>
+</body>

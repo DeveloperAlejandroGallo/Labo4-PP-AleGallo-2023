@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BorrarPeliculaComponent } from './borrar-pelicula.component';
+import { PaisCardComponent } from './pais-card.component';
 
-describe('BorrarPeliculaComponent', () => {
-  let component: BorrarPeliculaComponent;
-  let fixture: ComponentFixture<BorrarPeliculaComponent>;
+describe('PaisCardComponent', () => {
+  let component: PaisCardComponent;
+  let fixture: ComponentFixture<PaisCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BorrarPeliculaComponent ]
+      declarations: [ PaisCardComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BorrarPeliculaComponent);
+    fixture = TestBed.createComponent(PaisCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

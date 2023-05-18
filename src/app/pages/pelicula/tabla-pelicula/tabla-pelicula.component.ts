@@ -13,10 +13,10 @@ export class TablaPeliculaComponent implements OnInit{
 
   @Output() peliSeleccionadaOutput: EventEmitter<Pelicula> = new EventEmitter<Pelicula>();
 
-  listaPeliculas!: Array<Pelicula>;
+  @Input() listaPeliculas!: Array<Pelicula>;
 
   ngOnInit(): void {
-    this.listaPeliculas = this.peliculasService.listadoPeliculas;
+
   }
 
   seleccionarPeli(peli: Pelicula){

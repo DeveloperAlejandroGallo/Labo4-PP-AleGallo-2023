@@ -118,7 +118,7 @@ onSubmitPelicula(){
     this.peliServ.nuevo(peliNueva);
     this.messages.Info(`Pelicula ${peliNueva.Titulo} creada.`);
     this.peliculaForm.reset();
-    this.router.navigate(['/pelicula/menu'])
+    this.router.navigate(['/peliculas'])
 
   // }catch(err){
   //   this.messages.Error(`Error al guardar Pelicula ${(err as Error).message}`);

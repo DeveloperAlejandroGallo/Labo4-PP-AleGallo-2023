@@ -101,16 +101,16 @@ export class AbmActorComponent implements OnInit{
 
 
   public LimpiarCampos() {
-    let nombreCommon: Name = {
-      common: ''
-    }
-    let flagsPng: Flag = {
-      png: ''
-    }
-    let paisLimpio: Pais = {
-      name: nombreCommon,
-      flags: flagsPng,
-    }
+    // let nombreCommon: Name = {
+    //   common: ''
+    // }
+    // let flagsPng: Flag = {
+    //   png: ''
+    // }
+    // let paisLimpio: Pais = {
+    //   name: nombreCommon,
+    //   flags: flagsPng,
+    // }
 
 
     this.nombreActor = "";

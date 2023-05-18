@@ -1,0 +1,13 @@
+<h4 class="d-flex justify-content-between align-items-center mb-3">
+  <h1 style="color: azure;">Pais</h1>
+</h4>
+<div class="card" style="width: 18rem; height: 20rem">
+  <div class="card-body">
+    <img [src]="paisRecibido!.flags.png" width="120px" height="150px" class="mx-auto d-block" alt="...">
+    <h4 class="card-title">{{paisRecibido!.name.common}} </h4>
+    <h5 class="card-text mb-2">Capital: {{paisRecibido!.capital}}</h5>
+    <h5 class="card-text mb-2">Región: {{paisRecibido!.region}}</h5>
+    <h5 class="card-text mb-2">Es Independiendte: {{paisRecibido!.independent}}</h5>
+    <h5 class="card-text mb-2">Población: {{paisRecibido!.population}}</h5>
+  </div>
+</div>

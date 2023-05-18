@@ -15,16 +15,14 @@ export class BusquedaComponent implements OnInit {
    *
    */
   constructor(
-    private pelis: PeliculasService
-    ) {
-
-  }
+    private pelisService: PeliculasService
+    ) {}
 
   listadoPeliculas = Array<Pelicula>();
   peliculaSeleccionada?: Pelicula;
 
   ngOnInit(): void {
-    this.listadoPeliculas = this.pelis.listadoPeliculas;
+    this.listadoPeliculas = this.pelisService.listadoPeliculas;
   }
 
   recibirPelicula(peli: Pelicula) {
@@ -32,8 +30,4 @@ export class BusquedaComponent implements OnInit {
 
     }
 
-  borrarPelicula(peli: Pelicula){
-    this.listadoPeliculas = this.listadoPeliculas.filter((p) => p.id !== peli.id);
-
-  }
 }

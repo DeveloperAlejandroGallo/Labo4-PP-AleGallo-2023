@@ -1,19 +1,19 @@
 <body class="bg-dark">
   <div class="jumbotron jumbotron-fluid">
       <div class="container">
-          <app-tabla-pelicula (peliSeleccionadaOutput)="recibirPelicula($event)"></app-tabla-pelicula>
+          <app-tabla-pelicula [listaPeliculas]="listadoPeliculas" (peliSeleccionadaOutput)="recibirPelicula($event)"></app-tabla-pelicula>
       </div>
   </div>
   <div class="container">
       <div class="row">
           <div class="col-md-4"  *ngIf="peliculaSeleccionada">
-              <app-borrar-pelicula [borrar_peliSeleccionadaInput]="peliculaSeleccionada"></app-borrar-pelicula>
+              <app-pelicula-card [peliSeleccionadaInput]="peliculaSeleccionada" [accion]="'Borrar'"></app-pelicula-card>
           </div>
           <div class="col-md-4" *ngIf="peliculaSeleccionada">
-              <app-detalle-pelicula [detalle_peliSeleccionadaInput]="peliculaSeleccionada"></app-detalle-pelicula>
+              <app-pelicula-card [peliSeleccionadaInput]="peliculaSeleccionada" [accion]="'Detalle'"></app-pelicula-card>
           </div>
           <div class="col-md-4" *ngIf="peliculaSeleccionada">
-              <app-modificar-pelicula [modificar_peliSeleccionadaInput]="peliculaSeleccionada"></app-modificar-pelicula>
+            <app-pelicula-card [peliSeleccionadaInput]="peliculaSeleccionada" [accion]="'Modificar'"></app-pelicula-card>
           </div>
       </div>
   </div>

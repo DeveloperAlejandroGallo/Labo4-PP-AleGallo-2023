@@ -38,7 +38,6 @@ export class ImagenesService {
         console.log(response);
         this.listaImagenes = [];
         for (let item of response.items) {
-          console.log('getImages - Item: ', item);
           const url = await getDownloadURL(item);
           this.listaImagenes.push({nombre: item.name,url:url});
         }

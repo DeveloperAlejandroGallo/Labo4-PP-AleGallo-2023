@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Actor } from 'src/app/modelos/actor';
 
 @Component({
   selector: 'app-actor-card',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./actor-card.component.css']
 })
 export class ActorCardComponent {
+
+  @Input() actorSeleccionado!: Actor;
 
 }

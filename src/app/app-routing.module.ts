@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'error',component: ErrorComponent },
   {path: 'busqueda', component: BusquedaComponent},
   {path: 'peliculas', component: MenuPeliculaComponent},
-  {path: 'pelicula/alta', component: AltaPeliculaComponent},
+  {path: 'pelicula/alta/:id', component: AltaPeliculaComponent},
   {path: 'pelicula/listado', component: ListadoPeliculaComponent},
   {path: 'actores', component: MenuActorComponent},
   {path: 'actor/alta', component: AltaActorComponent},

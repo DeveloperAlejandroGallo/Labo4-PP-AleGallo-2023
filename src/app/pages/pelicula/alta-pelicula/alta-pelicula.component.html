@@ -5,7 +5,8 @@
             <app-tabla-actor (actorSeleccionadoOutput)="recibirActor($event)"></app-tabla-actor>
           </div>
           <div class="col-md-8 order-md-1">
-              <app-abm-pelicula [actoresQueActuaron]="actoresSeleccionados" (eliminarActorOutput)="recibirActorAEliminar($event)" ></app-abm-pelicula>
+              <app-abm-pelicula *ngIf="accion=='Alta'" [actoresQueActuaron]="actoresSeleccionados" (eliminarActorOutput)="recibirActorAEliminar($event)" ></app-abm-pelicula>
+              <app-modificar-pelicula *ngIf="accion=='Modificar'" ></app-modificar-pelicula>
           </div>
       </div>
   </div>

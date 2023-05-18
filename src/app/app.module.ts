@@ -65,6 +65,7 @@ import { PeliculaActorComponent } from './pages/actor/pelicula-actor/pelicula-ac
 import { AbmPeliculaComponent } from './pages/pelicula/abm-pelicula/abm-pelicula.component';
 import { TablaActorComponent } from './pages/actor/tabla-actor/tabla-actor.component';
 import { PaisCardComponent } from './components/pais-card/pais-card.component';
+import { ModificarPeliculaComponent } from './pages/pelicula/modificar-pelicula/modificar-pelicula.component';
 
 
 
@@ -91,7 +92,8 @@ import { PaisCardComponent } from './components/pais-card/pais-card.component';
     PeliculaActorComponent,
     AbmPeliculaComponent,
     TablaActorComponent,
-    PaisCardComponent
+    PaisCardComponent,
+    ModificarPeliculaComponent
   ],
   imports: [
     AppRoutingModule,

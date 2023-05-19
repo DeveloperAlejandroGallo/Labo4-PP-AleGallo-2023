@@ -57,6 +57,7 @@ import { AltaRepartidorComponent } from './pages/repartidor/alta-repartidor/alta
 import { CargaRepartidorComponent } from './pages/repartidor/carga-repartidor/carga-repartidor.component';
 import { RepartidorCardComponent } from './components/repartidor-card/repartidor-card.component';
 import { ListadoRepartidorComponent } from './pages/repartidor/listado-repartidor/listado-repartidor.component';
+import { TablaRepartidorComponent } from './pages/repartidor/tabla-repartidor/tabla-repartidor.component';
 
 
 
@@ -77,7 +78,8 @@ import { ListadoRepartidorComponent } from './pages/repartidor/listado-repartido
     AltaRepartidorComponent,
     CargaRepartidorComponent,
     RepartidorCardComponent,
-    ListadoRepartidorComponent
+    ListadoRepartidorComponent,
+    TablaRepartidorComponent
   ],
   imports: [
     AppRoutingModule,

@@ -1,0 +1,16 @@
+<h4 class="d-flex justify-content-between align-items-center mb-3">
+  <h1 style="color: azure;">Repartidores</h1>
+</h4>
+<div class="card">
+  <ul class="list-group mb-3" style="max-height: 250px;">
+      <li *ngFor="let repartidor of listaRepartidores" class="list-group-item d-flex justify-content-between lh-condensed"
+      (click)="seleccionarRepartidor(repartidor)" appHighligth="aqua">
+          <div>
+              <p>{{repartidor.nombre}}</p>
+          </div>
+
+          <!-- <button type="button" class="btn btn-primary" (click)="seleccionarRepartidor(peli)">Seleccionar</button> -->
+
+      </li>
+  </ul>
+</div>

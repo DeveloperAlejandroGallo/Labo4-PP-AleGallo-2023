@@ -15,7 +15,7 @@ export class RepartidorService {
     this.nombreColeccion = collection(this.firestore, this.colectionName);
    }
 
-  listadoUsuarios!: Array<Repartidor>;
+  listadoRepartidores!: Array<Repartidor>;
 
 //Genericos
   traer(){
@@ -23,7 +23,7 @@ export class RepartidorService {
     const observable = collectionData(coleccion);
 
     observable.subscribe((respuesta)=>{
-      this.listadoUsuarios = respuesta as Array<Repartidor>;
+      this.listadoRepartidores = respuesta as Array<Repartidor>;
     });
   }
 
